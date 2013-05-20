@@ -1,0 +1,39 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4591
+
+winresizer.vim
+
+
+In default setting
+
+You press keys <Ctrl + E> or execute :WinResizerStartResize on vim(in normal mode), to run this plugin
+
+Start window resize mode, and you can resize current vim windows using h, j, k, l keys
+
+You want to finish resize mode, then press Enter key
+
+If you cancel window resize, then press q key. You will get window size of before change
+
+
+If you don't need this function,
+define global variable below in .vimrc
+
+let g:winresizer_enable = 0
+
+
+=-=-= [ Cheet sheet ]-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
+
+keymap of [window resize mode]
+
+h : expand window size to left
+j : expand window size to down
+k : expand window size to up
+l : expand window size to right
+q : cancel resize window and escepe [window resize mode]
+Enter : fix and escape
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+License
+
+winresizer is released under the MIT license.
