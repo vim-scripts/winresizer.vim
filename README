@@ -1,9 +1,9 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=4591
 
 winresizer.vim
+========================
 
-
-In default setting
+## In default setting
 
 You press keys <Ctrl + E> or execute :WinResizerStartResize on vim(in normal mode), to run this plugin
 
@@ -20,7 +20,70 @@ define global variable below in .vimrc
 let g:winresizer_enable = 0
 
 
-=-=-= [ Cheet sheet ]-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
+
+## Customize options ## ## ## ## 
+
+If you change setting and key mapping, can use below option.
+
+{variable name}
+  desc:    {description}
+  default: {default setting}
+
+g:winresizer_enable
+   desc:    Use winresizer (If this value is 0, this plugin will not work)
+   default: 1
+
+g:winresizer_finish_with_escape
+   desc:    If this value is 1, window resize mode is finished(fixed) by `Esc`
+   default: 1
+
+g:winresizer_vert_resize
+    desc:    The change width of window size when `left` or `right` key is pressed
+    default: 10
+
+g:winresizer_horiz_resize
+    desc:    The change height of window size when `down` or `up` key is pressed|
+    default: 3
+
+g:winresizer_start_key
+    desc:    Start window resize mode
+    default: <Ctrl + e>
+
+g:winresizer_keycode_left
+    desc:    Expand window size to left
+    default: 104  #  `h` key
+
+g:winresizer_keycode_right
+    desc:    Expand window size to right
+    default: 108  # `l` key
+
+g:winresizer_keycode_down
+    desc:    Expand window size to down
+    default: 106  #  `j` key
+
+g:winresizer_keycode_up
+    desc:    Expand window size to up
+    default: 107  # `k` key
+
+g:winresizer_keycode_finish
+    desc:    Fix and escape from window resize mode
+    default: 13    # `Enter` key
+
+g:winresizer_keycode_cancel
+    desc:    Cancel and quit window resize mode
+    default: 113  # `q` key
+
+#### _Example in your .vimrc_
+
+    " If you want to start window resize mode by `Ctrl+T`
+    let g:winresizer_start_key = '<C-T>'
+    
+    " If you cancel and quit window resize mode by `z` (keycode 122)
+    let g:winresizer_keycode_cancel = 122
+
+
+
+=-=-= [ Cheat sheet ]-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
 
 keymap of [window resize mode]
 
@@ -33,7 +96,10 @@ Enter : fix and escape
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+## Latest version (development version) and issues
 
-License
+https://github.com/jimsei/winresizer
 
+## License
 winresizer is released under the MIT license.
+
